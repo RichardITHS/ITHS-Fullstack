@@ -1,4 +1,4 @@
-﻿# Vecka 20 Måndag, PostgreSQL
+# Vecka 20 Måndag, PostgreSQL
 
 Denna veckan ska vi fördjupa oss mer i SQL tillsammans med databasen Postgres samt kunna publicera en back-end i "molnet"
 Vanligt namn istället för postgreSQL är "postgres", detta namnet kommer jag att använda framgent :)
@@ -35,19 +35,22 @@ Det finns tre steg för att slutföra PostgreSQL-installationen:
 - Verifiera installationen
 
 1. Ladda ned:
+</br>
 ![Download PostgreSQL](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Download-PostgreSQL.png)
 
-2. Installera:
+3. Installera:
 För att installera PostgreSQL på Windows måste du ha administratörsbehörighet.
 
 Steg 1. Dubbelklicka på installationsfilen, en installationsguide kommer att dyka upp och guida dig genom flera steg där du kan välja olika alternativ som du vill ha i PostgreSQL.
 
 Steg 2. Klicka på knappen Nästa
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-12-Windows-Step-1.png)
-
+</br>
 Steg 3. Ange installationsmapp, välj din egen eller behåll standardmappen som föreslås av PostgreSQL-installationsprogrammet och klicka på knappen Nästa
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-12-Windows-Step-2.png)
-
+</br>
 Steg 4. Välj programkomponenter att installera:
 
 PostgreSQL-servern för att installera PostgreSQL-databasservern
@@ -55,73 +58,96 @@ pgAdmin 4 för att installera PostgreSQL-databas GUI-hanteringsverktyget.
 Kommandoradsverktyg för att installera kommandoradsverktyg som psql, pg_restore, etc. Dessa verktyg låter dig interagera med PostgreSQL-databasservern med hjälp av kommandoradsgränssnittet.
 Stack Builder tillhandahåller ett GUI som låter dig ladda ner och installera drivrutiner som fungerar med PostgreSQL.
 För handledningen på den här webbplatsen behöver du inte installera Stack Builder så avmarkera den och klicka på Nästa för att välja datakatalogen:
-
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-12-Windows-Step-3.png)
-
+</br>
 Steg 5. Välj databaskatalogen för att lagra data eller acceptera standardmappen. Och klicka på knappen Nästa för att gå till nästa steg:
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-12-Windows-Step-4.png)
-
+</br>
 Steg 6. Ange lösenordet för databasens superanvändare (postgres)
 
 PostgreSQL körs som en tjänst i bakgrunden under ett tjänstekonto som heter postgres. Om du redan skapat ett tjänstekonto med namnet postgres måste du ange lösenordet för det kontot i följande fönster.
 
 När du har angett lösenordet måste du skriva in det igen för att bekräfta och klicka på knappen Nästa:
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-12-Windows-Step-5.png)
 
 Steg 7. Ange ett portnummer som PostgreSQL-databas servern ska lyssna på. Standardporten för PostgreSQL är 5432. Du måste se till att inga andra applikationer använder denna port.
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-12-Windows-Step-6.png)
-
+</br>
 Steg 8. Välj standardspråket som används av PostgreSQL-databasen. Om du lämnar det som standardspråk, kommer PostgreSQL att använda operativsystemets språk. Klicka sedan på knappen Nästa.
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-12-Windows-Step-7.png)
+</br>
 Steg 9. Installationsguiden visar sammanfattningsinformationen för PostgreSQL. Du måste granska den och klicka på knappen Nästa om allt är korrekt. Annars måste du klicka på Tillbaka-knappen för att ändra konfigurationen därefter.
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-12-Windows-Step-8.png)
+</br>
 Nu är du redo att installera PostgreSQL på din dator. Klicka på Nästa för att börja installera PostgreSQL.
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-12-Windows-Step-9.png)
+</br>
 Installationen kan ta några minuter att slutföra.
 Steg 10. Klicka på knappen Slutför för att slutföra PostgreSQL-installationen.
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-12-Windows-Step-11.png)
-
+</br>
 3. Verifiera installationen
 
 Det finns flera sätt att verifiera PostgreSQL-installationen. Du kan försöka ansluta till PostgreSQL-databasservern från vilken klientapplikation som helst, t.ex. psql och pgAdmin.
 
 Nu är allt klart!
 
-
+</br>
 ## Hur man installerar postgreSQL på MacOS
+</br>
 För att installera PostgreSQL på macOS följer du dessa steg:
 
 Starta först installationsguiden genom att dubbelklicka på installationsfilen:
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-macOS-step-1.png)
-
+</br>
 För det andra, välj katalogen där PostgreSQL ska installeras och klicka på knappen Nästa:
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-macOS-step-2.png)
-
+</br>
 För det tredje, välj de komponenter som du vill installera, avmarkera Stack Builder och klicka på knappen Nästa:
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-macOS-step-3.png)
+</br>
 För det fjärde, ange en katalog där PostgreSQL lagrar data och klicka på knappen Nästa:
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-macOS-step-4.png)
-
+</br>
 För det femte, ange lösenordet för postgres användarkonto. Du bör anteckna detta lösenord för att logga in på PostgreSQL-databasservern senare. Efter det klickar du på knappen Nästa.
 För det femte, ange lösenordet för postgres användarkonto. Du bör anteckna detta lösenord för att logga in på PostgreSQL-databasservern senare. Efter det klickar du på knappen Nästa.
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-macOS-step-5.png)
-
+</br>
 För det sjätte, ange portnumret som PostgreSQL-servern ska lyssna på. Som standard använder PostgreSQL portnummer 5432.
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-macOS-step-6.png)
-
+</br>
 För det sjunde, välj språket som används av PostgreSQL. Som standard använder PostgreSQL lokal för det aktuella operativsystemet:
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-macOS-step-7.png)
-
+</br>
 För det åttonde, granska installationsinformationen. Om allt ser korrekt ut, klicka på Nästa för att påbörja installationen.
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-macOS-step-8.png)
-
+</br>
 För det nionde klickar du på Nästa för att börja installera PostgreSQL-databasservern på din dator:
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-macOS-step-9.png)
-
+</br>
 Klicka slutligen på knappen Slutför när installationen är klar:
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-step-11.png)
-
+</br>
 ## Skapa databas i pgAdmin
+</br>
 pgAdmin är ett grafiskt program som kan användas som ett alternativ till terminalen/psql.
 För mer dokumentation finns deras sida [här](https://www.pgadmin.org/)
 
@@ -130,13 +156,16 @@ Se till att PostgreSQL går att ansluta till via terminalen.
 Starta först pgAdmin.
 För det andra, ange lösenordet för postgres-användaren.
 För det tredje, högerklicka på PostgreSQL 12 och välj Skapa > Databas.. för att öppna en dialogruta för att skapa en ny databas.
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Restore-Sample-Database-Step-1.png)
-
+</br>
 För det fjärde, ange valfritt namn som databas, postgres som ägare och klicka på knappen Spara för att skapa dvdrental-databasen. (**dvd-rental är endast ett exempel i denna beskrivning, ni anger ett eget databasnamn**)
+</br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Restore-Sample-Database-Step-2.png)
-
+</br>
 
 ## Viktigaste att känna till i pgAdmin
+</br>
 - Skapa en tabell med pgAdmins verktyg
 - Skapa en tabell med query tool
 - Se tabeller
@@ -145,12 +174,14 @@ För det fjärde, ange valfritt namn som databas, postgres som ägare och klicka
 
 **Vänligen se inspelad lektion!** 
 
-
+</br>
 ## Använda databasen i en backend-applikation
+</br>
 Först och främst så måste det finnas en mapp som vi förslagsvis kallar "backend".
 I denna måste vi i sedvanlig ordning installera de paket som vi önskar att använda.
 Repetion men förslagsvis i terminalen efter att skapat ett repo och öppnat med github desktop och sedan i terminalen:
 (Obs detta är endast backend och ej frontend, inte typescript eller react osv)
+</br>
 1.
 - mkdir backend (skapar en mapp med namnet backend)
 - cd backend
@@ -218,8 +249,9 @@ client.connect(function (err) {
 
 8.
 skriv npm start i terminalen och se att loggen visar: Database connected
-
+</br>
 ## Använda express
+</br>
 Nu ska vi implementera express och övriga paket/middlewares
 
 I server.js:
@@ -263,7 +295,8 @@ app.get('/persons', async (req, res) => {
         const allPersons = await client.query('SELECT * FROM persons')
         res.json(allPersons.rows)
     } catch (err) {
-        console.log(err.message)
+      
+  console.log(err.message)
     }
 })
 
@@ -276,9 +309,6 @@ app.listen(8800, () => {
 
 KLART!
 Nu ska ni själva arbeta med att lägga till post, put och delete av personer i er databas.
-
-
-
 
 
 
