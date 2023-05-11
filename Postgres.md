@@ -154,8 +154,9 @@ För mer dokumentation finns deras sida [här](https://www.pgadmin.org/)
 Se till att PostgreSQL går att ansluta till via terminalen.
 
 Starta först pgAdmin.
-För det andra, ange lösenordet för postgres-användaren.
-För det tredje, högerklicka på PostgreSQL 12 och välj Skapa > Databas.. för att öppna en dialogruta för att skapa en ny databas.
+För det andra, ange lösenordet för postgres-användaren.</br>
+För det tredje, högerklicka på PostgreSQL 12 och </br>
+välj Skapa > Databas.. för att öppna en dialogruta för att skapa en ny databas.</br>
 </br>
 ![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Restore-Sample-Database-Step-1.png)
 </br>
@@ -166,11 +167,11 @@ För det fjärde, ange valfritt namn som databas, postgres som ägare och klicka
 
 ## Viktigaste att känna till i pgAdmin
 </br>
-- Skapa en tabell med pgAdmins verktyg
-- Skapa en tabell med query tool
-- Se tabeller
-- Se data i tabeller
-- Editera data i tabeller
+- Skapa en tabell med pgAdmins verktyg</br>
+- Skapa en tabell med query tool</br>
+- Se tabeller</br>
+- Se data i tabeller</br>
+- Editera data i tabeller</br>
 
 **Vänligen se inspelad lektion!** 
 
@@ -183,19 +184,19 @@ Repetion men förslagsvis i terminalen efter att skapat ett repo och öppnat med
 (Obs detta är endast backend och ej frontend, inte typescript eller react osv)
 </br>
 1.
-- mkdir backend (skapar en mapp med namnet backend)
-- cd backend
-- touch server.js (skapar en server.js fil)
-- npm init
-- npm i express
-- npm i nodemon --save-dev (glöm ej att lägga till startskriptet i package.json, bör ni kunna nu :) ):
- "start": "nodemon server.js"
- - body-parser (validering av json data)
- - npm i cors (hanterar cors)
+- mkdir backend (skapar en mapp med namnet backend)</br>
+- cd backend</br>
+- touch server.js (skapar en server.js fil)</br>
+- npm init</br>
+- npm i express</br>
+- npm i nodemon --save-dev (glöm ej att lägga till startskriptet i package.json, bör </br>ni kunna nu :) ):</br>
+ "start": "nodemon server.js"</br>
+ - body-parser (validering av json data)</br>
+ - npm i cors (hanterar cors)</br>
 
 2.
-Nu installera dotenv och pg:
-- npm i dotenv pg
+Nu installera dotenv och pg:</br>
+- npm i dotenv pg</br>
 
 3.
 Skapa en .env-fil i backend-mappen med följande innehåll:
@@ -207,19 +208,19 @@ PORT=5432</br>
 (På Windows ska PASSWORD vara lösenordet som sattes under installationen av PostgreSQL.)
 
 4.
-Lägg in .env-filen i .gitignore så att .env-filens innehåll inte registreras i Git .gitignore skulle till exempel kunna se ut så här:
-.env
-node_modules
+Lägg in .env-filen i .gitignore så att .env-filens innehåll inte registreras i Git .gitignore skulle till exempel kunna se ut så här:</br>
+.env</br>
+node_modules</br>
 
 5.
-Öppna server.js och importera från dotenv och pg:
-const dotenv =  require('dotenv'),
-{ Client }  =  require('pg')
+Öppna server.js och importera från dotenv och pg:</br>
+const dotenv =  require('dotenv'),</br>
+{ Client }  =  require('pg')</br>
 
-**Vid ES6 använd:**
-import * as dotenv from 'dotenv'
-import pkg from 'pg'
-const { Client } = pkg
+**Vid ES6 använd:**</br>
+import * as dotenv from 'dotenv'</br>
+import pkg from 'pg'</br>
+const { Client } = pkg</br>
 
 6.
 Anropa dotenv.config(), vilket placerar de så kallade miljövariablerna från .env i det inbyggda process.env-objektet:
@@ -229,8 +230,8 @@ dotenv.config()
 7.
 Vi kan nu ansluta till PostgreSQL:
 
-**OBS: "client" kan även heta db eller valfritt namn**
-const client =  new  Client({
+**OBS: "client" kan även heta db eller valfritt namn**</br>
+const client =  new  Client({</br>
 
 database: process.env.DATABASE,</br>
 host: process.env.HOST,</br>
@@ -240,7 +241,7 @@ user: process.env.USER</br>
 
 })
 
-och lägg till errorfunktion
+och lägg till errorfunktion</br>
 client.connect(function (err) {</br>
     if (err) throw err</br>
     console.log('Database Connected')</br>
