@@ -259,36 +259,47 @@ I server.js:
 ***Importera:***
 
 Importera enligt nedan:
-
+</br>
 import express from 'express'
+</br>
 import cors from 'cors'
+</br>
 import bodyParser from 'body-parser'
+</br>
 
 ***Använda:***
 Implementerar express tillsammans med "app":
 const app = express()
-
+</br>
 Middlewares:
+</br>
 app.use(bodyParser.json())
+</br>
 app.use(
+</br>
     bodyParser.urlencoded({
         extended: true
     })
 )
+</br>
 app.use(cors())
+</br>
 app.use(express.json())
+</br>
 app.use((request, response, next) => {
     response.header('Access-Control-Allow-Origin', '*')
     response.header('Access-Control-Allow-Headers', 'Content-Type')
     next()
 })
-
+</br>
 ***Rutter:***
+</br>
 //Get anrop
+</br>
 app.get('/', (req, res) => {
     res.json('Hejsan svejsan')
 })
-
+</br>
 //Get , alla personer
 app.get('/persons', async (req, res) => {
     try {
@@ -308,7 +319,9 @@ app.listen(8800, () => {
 })
 
 KLART!
-Nu ska ni själva arbeta med att lägga till post, put och delete av personer i er databas.
+Nu ska ni själva arbeta med att lägga till post, put och delete av personer (eller annat) i er databas.
+
+
 
 
 
