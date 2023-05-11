@@ -1,6 +1,6 @@
 # Vecka 20 Måndag, PostgreSQL
 
-Denna veckan ska vi fördjupa oss mer i SQL tillsammans med databasen Postgres samt kunna publicera en back-end i "molnet"
+Denna veckan ska vi fördjupa oss mer i SQL tillsammans med databasen Postgres samt kunna koppla detta till frontend.
 Vanligt namn istället för postgreSQL är "postgres", detta namnet kommer jag att använda framgent :)
 **PostgreSQL** är (likt SQLite) **en SQL-databas** som är öppen källkod och kostnadsfri att använda.
 Uppgifterna som krävs för att ansluta till en PostgreSQL-databas kan (ska) läggas in i en .env-fil
@@ -173,7 +173,7 @@ För det fjärde, ange valfritt namn som databas, postgres som ägare och klicka
 - Se data i tabeller</br>
 - Editera data i tabeller</br>
 
-**Vänligen se inspelad lektion!** 
+**Vänligen se inspelad lektion!**
 
 </br>
 ## Använda databasen i en backend-applikation
@@ -309,7 +309,7 @@ app.get('/persons', async (req, res) => {</br>
         const allPersons = await client.query('SELECT * FROM persons')</br>
         res.json(allPersons.rows)</br>
     } catch (err) {</br>
-      
+
   console.log(err.message)
     }
 })
@@ -325,8 +325,3 @@ app.listen(8800, () => {
 
 KLART!
 Nu ska ni själva arbeta med att lägga till post, put och delete av personer (eller annat) i er databas.
-
-
-
-
-
