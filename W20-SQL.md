@@ -65,3 +65,71 @@ UPDATE persons</br>
 SET LastName = 'Richard'</br>
 WHERE id = 2</br>
 </br>
+
+## Hur gör vi med ovan i express?:
+När vi arbetar med pg i express så tillkallar vi alltid och använder client.query eller db.query beroende på vad ni valt att kalla variabeln.
+</br>
+</br>
+![](/img/express1.png)
+</br>
+</br>
+Alla olika metoder vi använder är asynkrona.</br>
+Vi måste även se till att ha en try and catch metod för errorhantering.</br>
+Bra vore även om ni arbetade med att ge tillbaka statuskoderna som ni lärt er tidigare.
+
+**Ett exempel hur ni använder GET och SQL SELECT:**
+</br>
+</br>
+![](/img/express2.png)
+</br>
+</br>
+
+**Ett exempel hur ni använder POST och SQL INSERT:**
+Observer att nedan är ett förutbestämt värde, vid formulär på hos en klient</br>
+är det givetvis annorlunda, det får ni lista ut vid grupp projektet
+</br>
+</br>
+![](/img/express3.png)
+</br>
+</br>
+
+## Relation med flera tabeller:
+Att kunna skapa relationer mellan tabeller är en viktig del i arbetet med databaser</br>
+och framförallt den starka sidan med SQL</br>
+Att ha en relation innebär kort och gott att vi exempelvis kan ha en tabell med användare</br>
+som i sin tur har gjort inköp i en webbutik, vars tabell heter "beställningar"</br>
+Varje gång en av användare lägger en order kommer denna att arbeta ihop med den andra tabellen</br>
+Vi kan därför få en överblick på kunder och deras ordrar och vi brukar som nämnt alltid skapa ER diagram</br>
+innan vi planerar hur vår databas ska sättas upp.</br>
+</br>
+</br>
+**Exempel:**
+Ett ER-diagram för två tabeller: användare och beställningar.</br>
+Ett ER-diagram (Entity-Relationship diagram) är en grafisk representation</br>
+av entiteter och deras relationer till varandra. </br>
+I det här fallet kan du ha en relation mellan användare och beställningar </br>
+där en användare kan ha flera beställningar. </br>
+Detta kan representeras med en en-till-många-relation mellan </br>
+användartabellen och beställningstabellen.
+</br>
+</br>
+
+![](/img/express4.png)
+</br>
+</br>
+I det här exemplet har varje användare en unik UserID och varje beställning har en unik OrderID. </br>
+En användare kan ha flera beställningar, men varje beställning hör till en enda användare.</br>
+Detta representeras med en en-till-många-relation mellan de två tabellerna.</br>
+</br>
+</br>
+För att skapa denna relation i SQL kan du använda följande kod:</br>
+</br>
+</br>
+![](/img/express5.png)
+</br>
+</br>
+Detta skapar två tabeller: Users och Orders. </br>
+I Orders-tabellen finns det en kolumn som heter UserID som är en främmande </br>nyckel som refererar till UserID-kolumnen i Users-tabellen. </br>
+Detta skapar en relation mellan de två tabellerna där varje rad i </br>Orders-tabellen hör till en enda rad i Users-tabellen.</br>
+
+

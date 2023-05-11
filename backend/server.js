@@ -54,6 +54,19 @@ app.get('/persons', async (req, res) => {
     }
 })
 
+
+//POST , så att vi kan skapa personer (Nedan är ett kodat exempel, om det är ett formulär
+//är det givetvis annorlunda)
+app.post('/person', async (req, res) => {
+    const { LastName, FirstName, Address, City } = req.body
+    const values = [title, cover, price, about]
+    await db.query(
+        'INSERT INTO persons(Smiths, Janes, 456 Elm St, Shelbyvilles) VALUES($1, $2, $3, $4)',
+        values
+    )
+    res.send('Person Added')
+})
+
 app.listen(8800, () => {
     console.log('Server is running')
 })
