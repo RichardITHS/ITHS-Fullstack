@@ -67,6 +67,27 @@ app.post('/person', async (req, res) => {
     res.send('Person Added')
 })
 
+
+//Exempel på joins
+app.get('/orders/:userId', async (req, res) => {
+    const userId = req.params.userId;
+    const query = `
+      SELECT *
+      FROM Orders
+      JOIN Users
+      ON Orders.UserID = Users.UserID
+      WHERE Users.UserID = $1
+    `;
+    const values = [userId];
+    try {
+      const result = await pool.query(query, values);
+      res.json(result.rows);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send('An error occurred');
+    }
+  });
+
 app.listen(8800, () => {
     console.log('Server is running')
 })

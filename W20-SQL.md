@@ -131,5 +131,29 @@ För att skapa denna relation i SQL kan du använda följande kod:</br>
 Detta skapar två tabeller: Users och Orders. </br>
 I Orders-tabellen finns det en kolumn som heter UserID som är en främmande </br>nyckel som refererar till UserID-kolumnen i Users-tabellen. </br>
 Detta skapar en relation mellan de två tabellerna där varje rad i </br>Orders-tabellen hör till en enda rad i Users-tabellen.</br>
+</br>
+</br>
 
+## Få ut data från relationstabeller:
+</br>
+</br>
+För att få ut data från exemplet ovan i Express och SQL så </br>
+behöver arbeta med något som kallas för "join", dvs att man</br>
+för samman de båda i en query</br>
+Läs mer om Joins på de källor som är angivet längst upp i denna fil</br>
+</br>
+</br>
+Här ett exempel på hur vi kan plocka ut alla beställningar som en användare har</br>
+ gjort med de tabeller vi gett exempel på ovan med express, sql och joins:</br>
+ </br>
+ </br>
 
+![](/img/express6.png)
+
+</br>
+</br>
+Nu har vi gått igenom det viktigaste för er.</br>
+Det finns otroligt mycket trevligt man kan göra i SQL</br>
+här har vi visat det mest elementära i detta</br>
+Det är upp till er att fördjupa er i detta i era självstudier</br>
+Grupp Projektet kommer att ge er utmaningar i detta</br>

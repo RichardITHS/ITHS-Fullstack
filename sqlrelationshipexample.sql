@@ -11,3 +11,4 @@ CREATE TABLE Orders (
     UserID int,
     FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
+
