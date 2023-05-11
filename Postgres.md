@@ -183,7 +183,7 @@ I denna måste vi i sedvanlig ordning installera de paket som vi önskar att anv
 Repetion men förslagsvis i terminalen efter att skapat ett repo och öppnat med github desktop och sedan i terminalen:
 (Obs detta är endast backend och ej frontend, inte typescript eller react osv)
 </br>
-1.
+1.</br>
 - mkdir backend (skapar en mapp med namnet backend)</br>
 - cd backend</br>
 - touch server.js (skapar en server.js fil)</br>
@@ -194,25 +194,25 @@ Repetion men förslagsvis i terminalen efter att skapat ett repo och öppnat med
  - body-parser (validering av json data)</br>
  - npm i cors (hanterar cors)</br>
 
-2.
+2.</br>
 Nu installera dotenv och pg:</br>
 - npm i dotenv pg</br>
-
-3.
-Skapa en .env-fil i backend-mappen med följande innehåll:
+</br>
+3.</br>
+Skapa en .env-fil i backend-mappen med följande innehåll:</br>
 HOST=localhost</br>
 USER=postgres</br>
 PASSWORD=</br>
 DATABASE=postgres</br>
 PORT=5432</br>
 (På Windows ska PASSWORD vara lösenordet som sattes under installationen av PostgreSQL.)
-
-4.
+</br>
+4.</br>
 Lägg in .env-filen i .gitignore så att .env-filens innehåll inte registreras i Git .gitignore skulle till exempel kunna se ut så här:</br>
 .env</br>
 node_modules</br>
-
-5.
+</br>
+5.</br>
 Öppna server.js och importera från dotenv och pg:</br>
 const dotenv =  require('dotenv'),</br>
 { Client }  =  require('pg')</br>
@@ -221,14 +221,14 @@ const dotenv =  require('dotenv'),</br>
 import * as dotenv from 'dotenv'</br>
 import pkg from 'pg'</br>
 const { Client } = pkg</br>
-
-6.
+</br>
+6.</br>
 Anropa dotenv.config(), vilket placerar de så kallade miljövariablerna från .env i det inbyggda process.env-objektet:
-
+</br>
 dotenv.config()
-
-7.
-Vi kan nu ansluta till PostgreSQL:
+</br>
+7.</br>
+Vi kan nu ansluta till PostgreSQL:</br>
 
 **OBS: "client" kan även heta db eller valfritt namn**</br>
 const client =  new  Client({</br>
