@@ -268,7 +268,8 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 </br>
 
-***Använda:***
+***Använda:***</br>
+</br>
 Implementerar express tillsammans med "app":
 const app = express()
 </br>
@@ -293,7 +294,8 @@ app.use((request, response, next) => {</br>
     next()</br>
 })
 </br>
-***Rutter:***
+***Rutter:***</br>
+
 </br>
 //Get anrop
 </br>
@@ -312,7 +314,9 @@ app.get('/persons', async (req, res) => {</br>
     }
 })
 
-***Starta server:***
+***Starta server:***</br>
+</br>
+
 OBS:Valfri port men använd ej använda portar och den reserverade frontend porten: 3000
 
 app.listen(8800, () => {
