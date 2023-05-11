@@ -199,11 +199,11 @@ Nu installera dotenv och pg:
 
 3.
 Skapa en .env-fil i backend-mappen med följande innehåll:
-HOST=localhost
-USER=postgres
-PASSWORD=
-DATABASE=postgres
-PORT=5432
+HOST=localhost</br>
+USER=postgres</br>
+PASSWORD=</br>
+DATABASE=postgres</br>
+PORT=5432</br>
 (På Windows ska PASSWORD vara lösenordet som sattes under installationen av PostgreSQL.)
 
 4.
@@ -232,18 +232,18 @@ Vi kan nu ansluta till PostgreSQL:
 **OBS: "client" kan även heta db eller valfritt namn**
 const client =  new  Client({
 
-database: process.env.DATABASE,
-host: process.env.HOST,
-password: process.env.PASSWORD,
-port: process.env.PORT,
-user: process.env.USER
+database: process.env.DATABASE,</br>
+host: process.env.HOST,</br>
+password: process.env.PASSWORD,</br>
+port: process.env.PORT,</br>
+user: process.env.USER</br>
 
 })
 
 och lägg till errorfunktion
-client.connect(function (err) {
-    if (err) throw err
-    console.log('Database Connected')
+client.connect(function (err) {</br>
+    if (err) throw err</br>
+    console.log('Database Connected')</br>
 })
 
 
@@ -286,26 +286,26 @@ app.use(cors())
 </br>
 app.use(express.json())
 </br>
-app.use((request, response, next) => {
-    response.header('Access-Control-Allow-Origin', '*')
-    response.header('Access-Control-Allow-Headers', 'Content-Type')
-    next()
+app.use((request, response, next) => {</br>
+    response.header('Access-Control-Allow-Origin', '*')</br>
+    response.header('Access-Control-Allow-Headers', 'Content-Type')</br>
+    next()</br>
 })
 </br>
 ***Rutter:***
 </br>
 //Get anrop
 </br>
-app.get('/', (req, res) => {
-    res.json('Hejsan svejsan')
+app.get('/', (req, res) => {</br>
+    res.json('Hejsan svejsan')</br>
 })
 </br>
 //Get , alla personer
-app.get('/persons', async (req, res) => {
-    try {
-        const allPersons = await client.query('SELECT * FROM persons')
-        res.json(allPersons.rows)
-    } catch (err) {
+app.get('/persons', async (req, res) => {</br>
+    try {</br>
+        const allPersons = await client.query('SELECT * FROM persons')</br>
+        res.json(allPersons.rows)</br>
+    } catch (err) {</br>
       
   console.log(err.message)
     }
