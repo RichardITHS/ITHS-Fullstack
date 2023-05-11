@@ -26,8 +26,8 @@ mer om datatyper i postgres kan ni läsa här(viktigt):</br>
 
 CREATE TABLE Persons (</br>
   id SERIAL PRIMARY KEY,</br>
-  LastName varchar(255),</br>
   FirstName varchar(255),</br>
+  LastName varchar(255),</br>
   Address varchar(255),</br>
   City varchar(255)</br>
 );</br>
@@ -35,7 +35,7 @@ CREATE TABLE Persons (</br>
 
 **Sätta in data:**
 </br>
-INSERT INTO Persons (LastName, FirstName, Address, City)</br>
+INSERT INTO Persons (FirstName, LastName, Address, City)</br>
 VALUES ('Smiths', 'Janes', '456 Elm St', 'Shelbyville');</br>
 </br>
 
@@ -55,7 +55,7 @@ DROP TABLE IF EXISTS persons;</br>
 **Uppdatera data:**
 </br>
 UPDATE persons</br>
-SET LastName = 'Richard'</br>
+SET FirstName = 'Richard'</br>
 WHERE id = 2</br>
 </br>
 

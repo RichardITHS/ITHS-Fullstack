@@ -45,31 +45,56 @@ app.get('/', (req, res) => {
 })
 
 //Get , alla personer
-app.get('/persons', async (req, res) => {
+/* app.get('/persons', async (req, res) => {
     try {
         const allPersons = await client.query('SELECT * FROM persons')
         res.json(allPersons.rows)
     } catch (err) {
         console.log(err.message)
     }
-})
+}) */
+
+app.get('/persons', async (req, res) => {
+    try {
+      const result = await client.query('SELECT * FROM persons');
+      res.json(result.rows);
+    } catch (err) {
+      console.error(err);
+      res.sendStatus(500);
+    }
+  });
+
 
 
 //POST , så att vi kan skapa personer (Nedan är ett kodat exempel, om det är ett formulär
 //är det givetvis annorlunda)
-app.post('/person', async (req, res) => {
+/* app.post('/person', async (req, res) => {
     const { LastName, FirstName, Address, City } = req.body
-    const values = [title, cover, price, about]
+    const values = [LastName, FirstName, Address, City]
     await db.query(
         'INSERT INTO persons(Smiths, Janes, 456 Elm St, Shelbyvilles) VALUES($1, $2, $3, $4)',
         values
     )
     res.send('Person Added')
 })
+ */
+app.post('/persons/submit-form', async (req, res) => {
+    const { FirstName, LastName, Address, City } = req.body;
+    try {
+      await client.query(
+        'INSERT INTO persons (FirstName, LastName, Address, City) VALUES ($1, $2, $3, $4)',
+        [FirstName, LastName, Address, City]
+      );
+      res.sendStatus(200);
+    } catch (err) {
+      console.error(err);
+      res.sendStatus(500);
+    }
+  });
 
 
 //Exempel på joins
-app.get('/orders/:userId', async (req, res) => {
+/* app.get('/orders/:userId', async (req, res) => {
     const userId = req.params.userId;
     const query = `
       SELECT *
@@ -86,7 +111,7 @@ app.get('/orders/:userId', async (req, res) => {
       console.error(err);
       res.status(500).send('An error occurred');
     }
-  });
+  }); */
 
 app.listen(8800, () => {
     console.log('Server is running')
