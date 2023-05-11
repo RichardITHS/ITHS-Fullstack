@@ -36,7 +36,7 @@ Det finns tre steg för att slutföra PostgreSQL-installationen:
 
 1. Ladda ned:
 </br>
-![Download PostgreSQL](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Download-PostgreSQL.png)
+[Download PostgreSQL](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Download-PostgreSQL.png)
 
 3. Installera:
 För att installera PostgreSQL på Windows måste du ha administratörsbehörighet.
