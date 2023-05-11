@@ -1,4 +1,4 @@
-# Vecka 20 Måndag, SQL Repititon
+# Vecka 20 Måndag, SQL Repetiton
 
 Som nämnt så skiljer det sig ej mycket mellan de olika SQL databaserna vad gäller SQL syntax.
 Ibland kan det dock skilja sig mellan olika namn på data typer etc men det lär man sig ganska fort.
@@ -37,12 +37,6 @@ CREATE TABLE Persons (</br>
 </br>
 INSERT INTO Persons (LastName, FirstName, Address, City)</br>
 VALUES ('Smiths', 'Janes', '456 Elm St', 'Shelbyville');</br>
-</br>
-
-**Hämta data:**
-</br>
-SELECT * FROM public.persons</br>
-ORDER BY id ASC </br>
 </br>
 
 **Hämta data:**
