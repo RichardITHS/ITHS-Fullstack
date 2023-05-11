@@ -10,16 +10,16 @@ Uppgifterna som krävs för att ansluta till en PostgreSQL-databas kan (ska) lä
 
 Beskrivning hur ni installerar postgreSQL kommer längre ned.
 
-Windows:
+Windows:</br>
 [Postgres till Windows](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
-![](https://www.postgresqltutorial.com/wp-content/uploads/2020/07/Install-PostgreSQL-12-Windows-Step-3.png
-MacOS:
+</br>
+MacOS:</br>
 [PostgreSQL installer download page](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 
 # Länkar till bra dokumentation
 
-[PostgreSQL tutorial](https://www.postgresqltutorial.com/)
-[W3Schools SQL tutorial](https://www.w3schools.com/sql/default.asp)
+[PostgreSQL tutorial](https://www.postgresqltutorial.com/)</br>
+[W3Schools SQL tutorial](https://www.w3schools.com/sql/default.asp)</br>
 
 
 ## Hur man installerar postgreSQL till windows:
