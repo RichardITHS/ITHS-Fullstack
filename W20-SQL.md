@@ -61,8 +61,7 @@ WHERE id = 2</br>
 
 **Ta bort data:**
 </br>
-UPDATE persons</br>
-SET LastName = 'Richard'</br>
+DELETE FROM persons</br>
 WHERE id = 2</br>
 </br>
 
