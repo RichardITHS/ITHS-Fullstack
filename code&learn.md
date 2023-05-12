@@ -54,7 +54,7 @@ För att underlätta...mata in information först i dessa tabeller..<br>
 Skapa en anslutning till din postgres databas<br>
 Kika på det vi gått igenom:
 
-[Postgres genomgång](./code%26learn.md)<br>
+![Postgres genomgång](./code%26learn.md)<br>
 
 <br>
 <br>
