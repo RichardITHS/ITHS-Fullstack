@@ -57,5 +57,6 @@ Kika på det vi gått igenom:
 [Postgres genomgång](./W20-Postgres.md)<br>
 
 <br>
+Få ut meddelandet i terminalen att Databas och server är igång
 <br>
 <br>
