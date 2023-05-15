@@ -58,5 +58,10 @@ Kika på det vi gått igenom:
 
 <br>
 Få ut meddelandet i terminalen att Databas och server är igång
+ </br>
+
+![](/img/express7.png)
+
+</br>
 <br>
 <br>

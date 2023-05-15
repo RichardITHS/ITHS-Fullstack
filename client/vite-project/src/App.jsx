@@ -8,6 +8,9 @@ function App() {
 
     //Hämta data
     const [data, setData] = useState([]);
+    const [success, setSuccess] = useState(false);
+
+
 
     useEffect(() => {
       axios.get('http://localhost:8800/persons/')
@@ -18,11 +21,6 @@ function App() {
           // handle error
         });
     }, []);
-
-
-
-
-
 
     //Posta data
     const [formData, setFormData] = useState({
@@ -40,12 +38,14 @@ function App() {
       };
 
       const handleSubmit = (event) => {
+
         event.preventDefault();
-        axios.post('http://localhost:8800/persons/submit-form', formData)
+       axios.post('http://localhost:8800/persons/submit-form', formData)
           .then(() => {
             // handle success
+            setSuccess(true);
           })
-          .catch(() => {
+          .catch(() =>  {
             // handle error
           });
       };
@@ -76,7 +76,11 @@ function App() {
       </label>
       <br />
       <button type="submit">Submit</button>
+      <div>
+      {success && <p>Form submitted successfully!</p>}
+    </div>
     </form>
+
 
         {data.map(item => (
           <div key={item.id}>
@@ -85,6 +89,7 @@ function App() {
         ))}
 
     </div>
+
     </>
   )
   }
